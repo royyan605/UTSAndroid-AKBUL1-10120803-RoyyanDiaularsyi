@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cek Kembali Isian Data"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/nimView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIM"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/nimText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nimView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/namaView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        app:layout_constraintTop_toBottomOf="@id/nimText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/namaView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tglView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir"
+        app:layout_constraintTop_toBottomOf="@id/nameText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/tglText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tglView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/jkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        app:layout_constraintTop_toBottomOf="@id/tglText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/jkView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp">
+
+        <RadioButton
+            android:id="@+id/lakiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki - Laki"/>
+
+        <RadioButton
+            android:id="@+id/perempuanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/hubView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hubungan Dengan Anda"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupRelation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hubView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp">
+
+        <RadioButton
+            android:id="@+id/otButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orang Tua"/>
+
+        <RadioButton
+            android:id="@+id/suamiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suami/Istri"/>
+
+        <RadioButton
+            android:id="@+id/anakButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anak"/>
+
+        <RadioButton
+            android:id="@+id/kerabatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kerabat Lainnya"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/selanjutnyaSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#7CFC00"
+        android:text="Selanjutnya"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupRelation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    NIM = 10120803
+    NAMA = Royyan Diaularsyi
+    AKBUL1
+    UTS AKB
+    Kamis 06/06/2024
+    -->
